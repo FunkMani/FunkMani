@@ -1,0 +1,27 @@
+---
+- hosts: apic
+	any_errors_fatal: true
+
+	vars:
+		cert_user: "lab-ansible"
+		csv_bd: []
+		csv_epg: []
+		csv_encap_id: []
+
+	vars_prompt:
+		- name: "apic_ip"
+			prompt: "Enter APIC IP"
+			private: no
+			default: "1.1.1.1"
+
+		- name: "file_name"
+			promt: "Enter filename"
+			private: no
+			default: "file.csv"
+
+		- name: "apic_user"
+			prompt: "Enter username"
+			private: no
+			defualt: "admin"
+
+			
